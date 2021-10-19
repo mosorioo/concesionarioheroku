@@ -36,9 +36,12 @@ import javax.validation.Valid;
 import java.util.HashSet;
 import java.util.Set;
 
+
+
 @RestController
 @RequestMapping("/auth")
 @CrossOrigin
+
 public class AuthController {
 
     @Autowired
@@ -58,7 +61,15 @@ public class AuthController {
 
     //Espera un json y lo convierte a tipo clase NuevoUsuario
     //url
+
+    @RequestMapping(value = "/products")
+    @CrossOrigin(origins = "http://localhost:21450")
+
+    public ResponseEntity<Object> getProduct() {
+     return null;
+    }
     
+
     @PostMapping("/usuario")
     public ResponseEntity<?> nuevoUsuario(@Valid @RequestBody NuevoUsuario nuevoUsuario,
                                           BindingResult bindingResult){
