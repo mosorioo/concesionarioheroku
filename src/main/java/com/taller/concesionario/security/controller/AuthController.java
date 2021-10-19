@@ -61,16 +61,13 @@ public class AuthController {
 
     //Espera un json y lo convierte a tipo clase NuevoUsuario
     //url
-
-    @RequestMapping(value = "/products")
-    @CrossOrigin(origins = "http://localhost:21450")
-
-    public ResponseEntity<Object> getProduct() {
-     return null;
-    }
     
 
     @PostMapping("/usuario")
+    @CrossOrigin(origins = "http://localhost:21450")
+    public ResponseEntity<Object> getUsuario() {
+     return null;
+    }
     public ResponseEntity<?> nuevoUsuario(@Valid @RequestBody NuevoUsuario nuevoUsuario,
                                           BindingResult bindingResult){
         if(bindingResult.hasErrors()){
@@ -101,6 +98,10 @@ public class AuthController {
     }
 
     @PostMapping("/login")
+    @CrossOrigin(origins = "http://localhost:21450")
+    public ResponseEntity<Object> getLogin() {
+     return null;
+    }
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
         if (bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos mal"), HttpStatus.BAD_REQUEST);
