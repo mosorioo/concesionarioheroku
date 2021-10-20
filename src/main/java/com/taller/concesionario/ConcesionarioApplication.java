@@ -19,7 +19,7 @@ public class ConcesionarioApplication {
 	// 	return new WebMvcConfigurer() {
 	// 		@Override
 	// 		public void addCorsMappings(CorsRegistry registry) {
-	// 			registry.addMapping("/**").allowedOrigins("http://localhost:21450");
+	// 			registry.addMapping("/**").allowedOrigins("http://localhost:8080");
 	// 		}
 	// 	};
 	// }
