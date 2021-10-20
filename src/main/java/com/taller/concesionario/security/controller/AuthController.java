@@ -39,9 +39,8 @@ import java.util.Set;
 
 
 @RestController
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.PATCH,RequestMethod.DELETE} )
 @RequestMapping("/auth")
-@CrossOrigin
-
 public class AuthController {
 
     @Autowired
@@ -64,10 +63,6 @@ public class AuthController {
     
 
     @PostMapping("/usuario")
-    @CrossOrigin(origins = "http://localhost:*")
-    public ResponseEntity<Object> getUsuario() {
-     return null;
-    }
     public ResponseEntity<?> nuevoUsuario(@Valid @RequestBody NuevoUsuario nuevoUsuario,
                                           BindingResult bindingResult){
         if(bindingResult.hasErrors()){
@@ -98,10 +93,6 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    @CrossOrigin(origins = "http://localhost:*")
-    public ResponseEntity<Object> getLogin() {
-     return null;
-    }
     public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
         if (bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos mal"), HttpStatus.BAD_REQUEST);
