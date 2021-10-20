@@ -64,7 +64,7 @@ public class AuthController {
     
 
     @PostMapping("/usuario")
-    @CrossOrigin(origins = "http://localhost:21450")
+    @CrossOrigin(origins = "http://localhost:*")
     public ResponseEntity<Object> getUsuario() {
      return null;
     }
@@ -98,7 +98,7 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    @CrossOrigin(origins = "http://localhost:21450")
+    @CrossOrigin(origins = "http://localhost:*")
     public ResponseEntity<Object> getLogin() {
      return null;
     }
