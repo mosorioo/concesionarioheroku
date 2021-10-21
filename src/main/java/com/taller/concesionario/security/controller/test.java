@@ -30,7 +30,7 @@ import java.util.HashSet;
 import java.util.Set;*/
 
 @RestController
-@CrossOrigin
+//@CrossOrigin
 public class test {
 
    @Autowired
