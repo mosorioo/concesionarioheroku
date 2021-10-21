@@ -30,7 +30,7 @@ import java.util.HashSet;
 import java.util.Set;*/
 
 @RestController
-@CrossOrigin
+//@CrossOrigin
 public class test {
 
    @Autowired
@@ -41,4 +41,9 @@ public class test {
 
         return new ResponseEntity<>(usuarioRepository.findByNombreUsuario(user.getName()).get(), HttpStatus.OK);
     }
+	@GetMapping("/auth/lala")
+	public ResponseEntity<Object> login1(){
+
+		return new ResponseEntity<>("usuarioRepository.findByNombreUsuario(user.getName()).get()", HttpStatus.OK);
+	}
 }
