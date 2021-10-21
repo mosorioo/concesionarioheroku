@@ -74,6 +74,7 @@ public class MainSecurity extends WebSecurityConfigurerAdapter {
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
+        
 		http.headers().addHeaderWriter(new StaticHeadersWriter("Access-Control-Allow-Origin", "*"));
 		http.headers().addHeaderWriter(new StaticHeadersWriter("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE"));
 		http.headers().addHeaderWriter(new StaticHeadersWriter("Access-Control-Allow-Headers", "*"));
